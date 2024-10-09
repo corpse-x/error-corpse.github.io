@@ -1,10 +1,12 @@
 function login() {
+    event.preventDefault(); // Prevent form submission and page reload
+
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
 
     if (username === "admin" && password === "kali") {
         alert("Login successful!");
-        window.location.href = "index.html"; // Redirect to home page
+        window.location.href = "home.html"; // Redirect to home page
     } else {
         alert("Invalid username or password. Try again.");
     }
